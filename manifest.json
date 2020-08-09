@@ -1,0 +1,22 @@
+{
+  "name": "My News",
+  "short_name": "My News",
+  "description": "Aplikasi berita dalam negri",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#e53935",
+  "theme_color": "#e53935",
+  "icons": [{
+    "src": "assets/icon512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }, {
+    "src": "assets/icon192x192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "assets/news.jpg",
+    "sizes": "590x332",
+    "type": "image/jpg"
+  }]
+}

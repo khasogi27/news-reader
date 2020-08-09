@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>My News</title>
+  <meta name="theme-color" content="#e53935" />
+  <meta name="description" content="My News" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="css/materialize.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="/manifest.json" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigasi -->
+  <nav class="red darken-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="./index.html" class="brand-logo" id="logo-container">News Reader</a>
+      <a href="./index.html" class="sidenav-trigger" data-target="nav-mobile"><i
+          class="material-icons">arrow_back</i></a>
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+
+  <div class="container" id="body-content"></div>
+
+  <script type="text/javascript" src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <!-- <script src="js/nav.js"></script> -->
+  <script src="js/api.js"></script>
+  <script>
+    // register service worker
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(function () {
+            console.log("pendaftaran serviceworker berhasil");
+          })
+          .catch(function () {
+            console.log("pendaftaran serviceworker gagal");
+          });
+      });
+    } else {
+      console.log("serviceworker tidak didukung browser ini");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      getArticlesById();
+    });
+  </script>
+</body>
+
+</html>
