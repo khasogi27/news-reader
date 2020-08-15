@@ -6,4 +6,4 @@ Submission 1 [Dicoding Academy](https://www.dicoding.com/) (Bertema PWA News Rea
 
 Menggunakan REST API dari [SINDONEWS](https://berita-news.herokuapp.com)
 
-[DEMO](https://khasogi27.github.io/news-reader/)
+LINK : [DEMO](https://khasogi27.github.io/news-reader/)
